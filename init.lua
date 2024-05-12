@@ -371,6 +371,10 @@ cmp.setup {
 
 require('zmeyer.config_treesitter').load()
 require('zmeyer.keybinds').bind()
+
+-- Relative line number.
+vim.o.relativenumber = 1
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
