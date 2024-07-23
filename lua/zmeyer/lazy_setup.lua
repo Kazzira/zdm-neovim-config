@@ -37,6 +37,9 @@ function Z.run()
     require('zmeyer.plugins.telescope'),
     require("zmeyer.plugins.peek"),
     require('zmeyer.plugins.null-ls'),
+    require('zmeyer.plugins.obsidian'),
+    require('zmeyer.plugins.harpoon'),
+    require('zmeyer.plugins.neogit'),
     -- Useful plugin to show you pending keybinds.
     { 'folke/which-key.nvim', opts = {} },
     {

@@ -371,6 +371,15 @@ cmp.setup {
 
 require('zmeyer.config_treesitter').load()
 require('zmeyer.keybinds').bind()
+
+local neogit = require('neogit')
+neogit.setup( {
+  disable_hint = false
+})
+
+vim.o.conceallevel = 2
+vim.o.relativenumber = true
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
