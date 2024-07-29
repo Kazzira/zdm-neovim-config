@@ -369,6 +369,7 @@ cmp.setup {
   },
 }
 
+
 require('zmeyer.config_treesitter').load()
 require('zmeyer.keybinds').bind()
 
@@ -379,6 +380,21 @@ neogit.setup( {
 
 vim.o.conceallevel = 2
 vim.o.relativenumber = true
+
+-- C++ TPP file extensions
+vim.api.nvim_create_autocmd( { "BufNewFile", "BufRead"}, {
+  pattern = { "*.tpp" },
+  command = [[set filetype=cpp]],
+})
+
+
+-- No line numbers in terminal mode.
+vim.api.nvim_create_autocmd({"TermOpen"}, {
+  callback = function()
+    vim.wo.number = false
+    vim.o.relativenumber = false
+  end
+})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
