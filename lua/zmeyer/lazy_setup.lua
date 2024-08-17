@@ -42,6 +42,7 @@ function Z.run()
     require('zmeyer.plugins.neogit'),
     require('zmeyer.plugins.markdown_preview'),
     require('zmeyer.plugins.oil'),
+    require('zmeyer.plugins.dired'),
     -- Useful plugin to show you pending keybinds.
     { 'folke/which-key.nvim', opts = {} },
     {
